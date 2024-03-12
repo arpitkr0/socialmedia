@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Social Detective</h1>
+      <h1>LOGIN PAGE</h1>
+      <% if (locals.error) { %> <%= error %> <% } %>
+      <form action="/login" method="post">
+        <label>Email:</label>
+        <input type="email" name="email" required />
+        <label>Password:</label>
+        <input type="password" name="password" required />
+        <button type="submit">Submit</button>
+      </form>
+      <p>New here? <a href="/signup">SignUp</a></p>
+    </div>
+  </body>
+</html>
